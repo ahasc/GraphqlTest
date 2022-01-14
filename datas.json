@@ -1,0 +1,46 @@
+{
+    "Books": [
+        {
+            "id": 1,
+            "title": "Cherub 1",
+            "description": "Premier volet de la saga",
+            "date": "2011-01-01",
+            "authorId": 1,
+            "videoId": "x3gjlw6"
+        },
+        {
+            "id": 2,
+            "title": "Cherub 2",
+            "description": "Deuxième volet de la saga",
+            "date": "2012-01-01",
+            "authorId": 1
+        },
+        {
+            "id": 3,
+            "title": "Le trône de fer",
+            "description": "Premier tome de la série mondialement connu",
+            "date": "1996-01-01",
+            "authorId": 2,
+            "videoId": "x53uc1m"
+        },
+        {
+            "id": 4,
+            "title": "La bataille des rois",
+            "description": "Deuxième tome de la série mondialement connu",
+            "date": "1998-01-01",
+            "authorId": 2
+        }
+    ],
+    "Author": [
+        {
+            "id": 1,
+            "name": "Robert Muchamore",
+            "Country": "England"
+        },
+        {
+            "id": 2,
+            "name": "George RR Martin",
+            "country": "USA"
+        }
+    ]
+}
