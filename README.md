@@ -2,6 +2,8 @@
 
 L'idée de ce test est de voir ta manière de coder et ta réflexion personelle face à sujet, il n'y par conséquent pas une seule "bonne réponse" mais pleins de manière de faire.
 
+La partie bonus n'est vraiment pas obligatoire, c'est dans le cas ou ta maitrise de graphql est assez bonne et que la partie 1 ne te prends pas trop de temps.
+
 ## Pré-requis
 
 - Apollo Server + Express (https://github.com/apollographql/apollo-server/blob/main/docs/source/getting-started.mdx)
