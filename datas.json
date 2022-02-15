@@ -31,11 +31,11 @@
             "authorId": 2
         }
     ],
-    "Author": [
+    "Authors": [
         {
             "id": 1,
             "name": "Robert Muchamore",
-            "Country": "England"
+            "country": "England"
         },
         {
             "id": 2,

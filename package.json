@@ -1,0 +1,32 @@
+{
+  "name": "graphqltest",
+  "version": "1.0.0",
+  "description": "L'idée de ce test est de voir ta manière de coder et ta réflexion personelle face à sujet, il n'y par conséquent pas une seule \"bonne réponse\" mais pleins de manière de faire.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "build": "babel src -d dist",
+    "start": "node --experimental-json-modules ./src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahasc/GraphqlTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahasc/GraphqlTest/issues"
+  },
+  "homepage": "https://github.com/ahasc/GraphqlTest#readme",
+  "dependencies": {
+    "apollo-server-core": "^3.6.3",
+    "apollo-server-express": "^3.6.3",
+    "axios": "^0.26.0",
+    "express": "^4.17.2",
+    "graphql": "^16.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.3",
+    "@babel/core": "^7.17.3"
+  }
+}
