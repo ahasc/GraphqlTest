@@ -29,7 +29,7 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.ts'],
-        paths: ["src"],
+        paths: ['src', 'specs'],
       },
     },
   },

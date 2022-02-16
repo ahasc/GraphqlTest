@@ -18,4 +18,12 @@ module.exports = {
     "import/prefer-default-export": 'off',
     'no-shadow': 'off'
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js'],
+        paths: ["src", 'specs'],
+      },
+    },
+  },
 };

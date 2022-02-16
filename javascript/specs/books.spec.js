@@ -5,7 +5,7 @@ import http from 'http';
 import axios from 'axios';
 
 import { Books, Authors } from '../src/datas.json';
-import { queries, fieldResolvers } from '../src/graphql/resolver';
+import { BookResolver } from '../src/graphql/resolvers/book.resolver';
 import { types } from '../src/graphql/types';
 
 describe('BookResolver tests', () => {
@@ -16,12 +16,13 @@ describe('BookResolver tests', () => {
     const app = express();
     httpServer = http.createServer(app);
 
+    const bookResolver = new BookResolver();
     apolloServer = new ApolloServer({
       typeDefs: types,
       resolvers: {
-        ...fieldResolvers,
+        ...bookResolver.fieldResolvers,
         Query: {
-          ...queries,
+          ...bookResolver.queries,
         },
       },
       plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],

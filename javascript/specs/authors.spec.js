@@ -5,7 +5,7 @@ import http from 'http';
 import axios from 'axios';
 
 import { Authors } from '../src/datas.json';
-import { queries } from '../src/graphql/resolver';
+import { AuthorResolver } from '../src/graphql/resolvers/author.resolver';
 import { types } from '../src/graphql/types';
 
 describe('AuthorResolver tests', () => {
@@ -20,7 +20,7 @@ describe('AuthorResolver tests', () => {
       typeDefs: types,
       resolvers: {
         Query: {
-          ...queries,
+          ...new AuthorResolver().queries,
         },
       },
       plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],

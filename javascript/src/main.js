@@ -3,18 +3,24 @@ import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core';
 import express from 'express';
 import http from 'http';
 
-import { fieldResolvers, queries } from './graphql/resolver.js';
+import { AuthorResolver } from './graphql/resolvers/author.resolver.js';
+import { BookResolver } from './graphql/resolvers/book.resolver.js';
 import { types } from './graphql/types.js';
 
 const bootstrap = async () => {
   const app = express();
   const httpServer = http.createServer(app);
+
+  const authorResolver = new AuthorResolver();
+  const bookResolver = new BookResolver();
+
   const server = new ApolloServer({
     typeDefs: types,
     resolvers: {
-      ...fieldResolvers,
+      ...bookResolver.fieldResolvers,
       Query: {
-        ...queries,
+        ...authorResolver.queries,
+        ...bookResolver.queries,
       },
     },
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
