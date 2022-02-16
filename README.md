@@ -90,3 +90,31 @@ name: ...
 "videoId": "x3gjlw6"
 }
 ```
+
+## Conclusion du test
+
+Ce repository a été mis à jour afin de repondre aux consignes du test. Il est decoupé en deux sous repertoires :
+
+- javascript : Corresponds à une version en Javascript / Express / Apollo (graphql)
+- typescript : Corresponds à une version en Typescript / Express / Apollo (type-graphql)
+
+Chacun de ces repertoire contient ses propres scripts et dependances. Pour configurer et tester un projet :
+
+```sh
+// Installation des modules
+npm i
+```
+
+```sh
+// Demarrage du serveur
+npm start
+
+// Lancement des tests
+npm test
+
+// Gestion du linter
+npm run lint
+npm run lint:fix
+```
+
+Test réalisé sous Node v14.17.1
