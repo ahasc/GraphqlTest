@@ -5,8 +5,10 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "build": "babel src -d dist",
-    "start": "node --experimental-json-modules ./src/main.js"
+    "start": "node --experimental-json-modules ./src/main.js",
+    "test": "./node_modules/.bin/jest --runInBand specs",
+    "lint": "./node_modules/.bin/eslint ./**/*.js",
+    "lint:fix": "./node_modules/.bin/eslint ./**/*.js --fix"
   },
   "repository": {
     "type": "git",
@@ -22,11 +24,22 @@
     "apollo-server-core": "^3.6.3",
     "apollo-server-express": "^3.6.3",
     "axios": "^0.26.0",
+    "corejs": "^1.0.0",
     "express": "^4.17.2",
     "graphql": "^16.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.3",
-    "@babel/core": "^7.17.3"
+    "@babel/core": "^7.17.3",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^8.9.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.5.1"
   }
 }
